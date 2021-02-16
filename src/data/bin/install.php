@@ -6,16 +6,16 @@
 $_SERVER['HTTP_ACCEPT_LANGUAGE'] = getenv("LANGUAGE") ?: "en-us";
 
 $vars = array(
-  'name'      => getenv("INSTALL_NAME")  ?: 'Helpdesk',
+  'name'      => getenv("INSTALL_NAME")  ?: 'My Helpdesk',
   'email'     => getenv("INSTALL_EMAIL") ?: 'helpdesk@example.com',
   'url'       => getenv("INSTALL_URL")   ?: 'http://localhost:8080/',
 
   'fname'       => getenv("ADMIN_FIRSTNAME") ?: 'Admin',
   'lname'       => getenv("ADMIN_LASTNAME")  ?: 'User',
   'admin_email' => getenv("ADMIN_EMAIL")     ?: 'admin@example.com',
-  'username'    => getenv("ADMIN_USERNAME")  ?: 'admin',
-  'passwd'      => getenv("ADMIN_PASSWORD")  ?: 'osticket',
-  'passwd2'     => getenv("ADMIN_PASSWORD")  ?: 'osticket',
+  'username'    => getenv("ADMIN_USERNAME")  ?: 'ostadmin',
+  'passwd'      => getenv("ADMIN_PASSWORD")  ?: 'Admin1',
+  'passwd2'     => getenv("ADMIN_PASSWORD")  ?: 'Admin1',
 
   'prefix'   => getenv("MYSQL_PREFIX")              ?: 'ost_',
   'dbhost'   => getenv("MYSQL_HOST")                ?: 'mysql',
