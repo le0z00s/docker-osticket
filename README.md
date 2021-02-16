@@ -45,7 +45,7 @@ docker run --name osticket -d --link osticket_mysql:mysql -p 8080:80 campbellsof
 Wait for the installation to complete then browse to your OSTicket staff control panel at `http://localhost:8080/scp/`. Login with default admin user & password:
 
 * username: **admin**
-* password: **osTicket**
+* password: **osticket**
 
 Now configure as required. If you are intending on using this image in production, please make sure you change the
 passwords above and read the rest of this documentation!
