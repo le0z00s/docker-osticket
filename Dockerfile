@@ -58,14 +58,13 @@ RUN set -x && \
     # Download languages packs
     wget -nv -O upload/include/i18n/fr.phar https://s3.amazonaws.com/downloads.osticket.com/lang/fr.phar && \
     wget -nv -O upload/include/i18n/de.phar https://s3.amazonaws.com/downloads.osticket.com/lang/de.phar && \
-    wget -nv -O upload/include/i18n/lv.phar https://s3.amazonaws.com/downloads.osticket.com/lang/lv.phar && \
-    wget -nv -O upload/include/i18n/lt.phar https://s3.amazonaws.com/downloads.osticket.com/lang/lt.phar && \
-    wget -nv -O upload/include/i18n/pl.phar https://s3.amazonaws.com/downloads.osticket.com/lang/pl.phar && \
-    wget -nv -O upload/include/i18n/pt.phar https://s3.amazonaws.com/downloads.osticket.com/lang/pt.phar && \
+    wget -nv -O upload/include/i18n/pt_PT.phar https://s3.amazonaws.com/downloads.osticket.com/lang/pt_PT.phar && \
     wget -nv -O upload/include/i18n/pt_BR.phar https://s3.amazonaws.com/downloads.osticket.com/lang/pt_BR.phar && \
     wget -nv -O upload/include/i18n/ru.phar https://s3.amazonaws.com/downloads.osticket.com/lang/ru.phar && \
     wget -nv -O upload/include/i18n/es_ES.phar https://s3.amazonaws.com/downloads.osticket.com/lang/es_ES.phar && \
     wget -nv -O upload/include/i18n/it.phar https://s3.amazonaws.com/downloads.osticket.com/lang/it.phar && \
+    wget -nv -O upload/include/i18n/lt.phar https://s3.amazonaws.com/downloads.osticket.com/lang/lt.phar && \
+    wget -nv -O upload/include/i18n/pl.phar https://s3.amazonaws.com/downloads.osticket.com/lang/pl.phar && \
     wget -nv -O upload/include/i18n/uk.phar https://s3.amazonaws.com/downloads.osticket.com/lang/uk.phar && \
     wget -nv -O upload/include/i18n/cs.phar https://s3.amazonaws.com/downloads.osticket.com/lang/cs.phar && \
     wget -nv -O upload/include/i18n/sk.phar https://s3.amazonaws.com/downloads.osticket.com/lang/sk.phar && \
@@ -80,14 +79,15 @@ RUN set -x && \
     git clone https://github.com/kyleladd/OSTicket-Trello-Plugin upload/include/plugins/trello && \
     # Install Bootstrap Theme
     git clone https://github.com/philbertphotos/osticket-bootstrap-theme upload/osticket-bootstrap-theme && \
-    mv upload/osticket-bootstrap-theme/* upload/ && \
-    rmdir upload/osticket-bootstrap-theme && \
+    cp -rf upload/osticket-bootstrap-theme/* upload/ && \
+    rm -fr upload/osticket-bootstrap-theme && \
     # Create msmtp log
     touch /var/log/msmtp.log && \
     chown www-data:www-data /var/log/msmtp.log && \
     # File upload permissions
     mkdir -p /var/tmp/nginx && \
-    chown nginx:www-data /var/tmp/nginx && chmod g+rx /var/tmp/nginx
+    chown nginx:www-data /var/tmp/nginx && chmod g+rx /var/tmp/nginx && \
+    chmod +x /data/bin/start.sh
 COPY src/ /
 VOLUME ["/data/upload/include/plugins","/data/upload/include/i18n","/var/log/nginx"]
 EXPOSE 80
