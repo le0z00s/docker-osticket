@@ -14,8 +14,8 @@ $vars = array(
   'lname'       => getenv("ADMIN_LASTNAME")  ?: 'User',
   'admin_email' => getenv("ADMIN_EMAIL")     ?: 'admin@example.com',
   'username'    => getenv("ADMIN_USERNAME")  ?: 'admin',
-  'passwd'      => getenv("ADMIN_PASSWORD")  ?: 'osTicket',
-  'passwd2'     => getenv("ADMIN_PASSWORD")  ?: 'osTicket',
+  'passwd'      => getenv("ADMIN_PASSWORD")  ?: 'osticket',
+  'passwd2'     => getenv("ADMIN_PASSWORD")  ?: 'osticket',
 
   'prefix'   => getenv("MYSQL_PREFIX")              ?: 'ost_',
   'dbhost'   => getenv("MYSQL_HOST")                ?: 'mysql',
