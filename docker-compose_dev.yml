@@ -1,9 +1,9 @@
 version: '3'
 
 services:
-  osticket:
+  osticket_dev:
     build: .
-    image: barghest84/docker-osticket
+    image: barghest84/docker-osticket:develop
     environment:
       - MYSQL_HOST=mysql
       - MYSQL_DATABASE=osticket
