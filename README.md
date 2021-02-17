@@ -29,7 +29,6 @@ Image has some minor modifications:
  		* Radio Buttons
  		* Slack Integration
  		* Microsoft Teams Integration
- 		* Trello Integration
   * Added Bootstrap Theme for Client
 
 OSTicket is being served by [nginx](http://wiki.nginx.org/Main) using [PHP-FPM](http://php-fpm.org/) with PHP 7.2.
