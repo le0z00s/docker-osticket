@@ -76,10 +76,6 @@ RUN set -x && \
     git clone https://github.com/Micke1101/OSTicket-plugin-field-radiobuttons upload/include/plugins/field-radiobuttons && \
     git clone https://github.com/clonemeagain/osticket-slack upload/include/plugins/slack && \
     git clone https://github.com/ipavlovi/osTicket-Microsoft-Teams-plugin upload/include/plugins/teams && \
-    # Install Bootstrap Theme
-    git clone https://github.com/philbertphotos/osticket-bootstrap-theme upload/osticket-bootstrap-theme && \
-    cp -rf upload/osticket-bootstrap-theme/* upload/ && \
-    rm -fr upload/osticket-bootstrap-theme && \
     # Create msmtp log
     touch /var/log/msmtp.log && \
     chown www-data:www-data /var/log/msmtp.log && \
