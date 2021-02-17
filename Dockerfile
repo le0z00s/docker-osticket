@@ -76,7 +76,6 @@ RUN set -x && \
     git clone https://github.com/Micke1101/OSTicket-plugin-field-radiobuttons upload/include/plugins/field-radiobuttons && \
     git clone https://github.com/clonemeagain/osticket-slack upload/include/plugins/slack && \
     git clone https://github.com/ipavlovi/osTicket-Microsoft-Teams-plugin upload/include/plugins/teams && \
-    git clone https://github.com/kyleladd/OSTicket-Trello-Plugin upload/include/plugins/trello && \
     # Install Bootstrap Theme
     git clone https://github.com/philbertphotos/osticket-bootstrap-theme upload/osticket-bootstrap-theme && \
     cp -rf upload/osticket-bootstrap-theme/* upload/ && \
